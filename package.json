@@ -30,7 +30,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp-sass": "^5.1.0",
-    "sass": "^1.80.3"
+    "sass": "^1.80.3",
+    "sharp": "^0.33.5"
   },
   "dependencies": {
     "gulp": "^5.0.0",

@@ -25,6 +25,7 @@ document.addEventListener('scroll', function () {
 
 // Function to dynamically create an image gallery
 function makeGalery() {
+
   const amount_img = 16; // Total number of images to display
   const gallery = document.querySelector('.galery-img'); // Select the gallery container
 
@@ -32,7 +33,11 @@ function makeGalery() {
   for (let img = 1; img <= amount_img; img++) {
     const image = document.createElement('IMG'); // Create an IMG element
 
-    image.src = `src/img/gallery/full/${img}.jpg`; // Set the source path for each image
+    image.loading = 'lazy'
+    image.width = "300"
+    image.height = "200"
+    //image.src = `src/img/gallery/full/${img}.jpg`; // Set the source path for each image; changed thumb insted of full
+    image.src = `src/img/gallery/thumb/${img}.jpg`; // Set the source path for each image
     image.alt = 'Image Gallery'; // Alt text for accessibility
 
     // Event handler to display the image in a modal
